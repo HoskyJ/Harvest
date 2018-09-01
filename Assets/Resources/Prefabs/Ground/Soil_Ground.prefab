@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4313165292649244}
   - component: {fileID: 33849046165514716}
   - component: {fileID: 23857519694922760}
-  - component: {fileID: 114438013695678998}
   - component: {fileID: 65555987201984270}
+  - component: {fileID: 114096225054177674}
   m_Layer: 0
   m_Name: Soil_Ground
   m_TagString: Untagged
@@ -97,7 +97,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.46, y: 0.1, z: 1.46}
   m_Center: {x: -0.0027010143, y: 0.05, z: 0.003379017}
---- !u!114 &114438013695678998
+--- !u!114 &114096225054177674
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1052547416673370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8343d46d4ffe1e341ac7a3e45158f449, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cee1e4e943f08842b42703f930457f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   originalPos: {x: 0, y: 0, z: 0}
