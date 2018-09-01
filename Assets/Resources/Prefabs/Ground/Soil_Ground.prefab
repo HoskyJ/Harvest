@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33849046165514716}
   - component: {fileID: 23857519694922760}
   - component: {fileID: 114438013695678998}
+  - component: {fileID: 65555987201984270}
   m_Layer: 0
   m_Name: Soil_Ground
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052547416673370}
   m_LocalRotation: {x: 0.000000059604645, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 1.46}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052547416673370}
   m_Mesh: {fileID: 4300000, guid: a5f529d603596f44184889828bc1caac, type: 3}
+--- !u!65 &65555987201984270
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1052547416673370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.46, y: 0.1, z: 1.46}
+  m_Center: {x: -0.0027010143, y: 0.05, z: 0.003379017}
 --- !u!114 &114438013695678998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,3 +109,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalPos: {x: 0, y: 0, z: 0}
+  tileWidth: 2
+  tileDepth: 2

@@ -24,10 +24,10 @@ public class GridManager : MonoBehaviour {
 		float zStartPos = tileSize/2f * (zSize - 1);
 		
 		for(int x = 0; x < xSize; x++){
-			float xPos = xStartPos - (tileSize * x);
+			float xPos = xStartPos - (x * tileSize);
 			for(int z = 0; z < zSize; z++){
-				float zPos = zStartPos - (tileSize * z);
-				Vector3 pos = new Vector3(xPos, 0, zPos);
+				float zPos = zStartPos - (z * tileSize);
+				Vector3 pos = new Vector3(xPos, planeY, zPos);
 				grid.Add(pos, null);
 				Instantiate(tilePrefab, pos, Quaternion.identity);
 			}
@@ -76,8 +76,14 @@ public class GridManager : MonoBehaviour {
 			position.x = Mathf.RoundToInt(position.x / tileSize) * tileSize;
 			position.z = Mathf.RoundToInt(position.z / tileSize) * tileSize;
 
-			position.x -= tileSize/2f;
-			position.z -= tileSize/2f;
+			if(block.GetComponent<Block>().tileWidth == 1){
+				position.x -= tileSize/2f;
+			}
+			
+			if(block.GetComponent<Block>().tileDepth == 1){
+				position.z -= tileSize/2f;
+			}
+
 			block.transform.position = position; // distance along the ray
 		}
 	}

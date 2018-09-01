@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4533124910098776}
   - component: {fileID: 33880903048492280}
   - component: {fileID: 23710854049580326}
-  - component: {fileID: 114680221157753878}
   - component: {fileID: 65133412833104620}
   m_Layer: 0
   m_Name: GrassHalf_Ground
@@ -97,15 +96,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.46, y: 0.3, z: 1.46}
   m_Center: {x: -0.002700001, y: 0.15, z: 0.003380984}
---- !u!114 &114680221157753878
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1656997760430280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8343d46d4ffe1e341ac7a3e45158f449, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originalPos: {x: 0, y: 0, z: 0}

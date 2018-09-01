@@ -34,7 +34,7 @@ public class Placeable : MonoBehaviour, IDragHandler, IEndDragHandler{
 					iconInstance = Instantiate(UIItem);
 					iconInstance.transform.SetParent(this.transform);
 					iconInstance.GetComponent<Image>().sprite = this.GetComponent<Image>().sprite;
-					iconInstanceSpawned= true;
+					iconInstanceSpawned = true;
 				}
 				iconInstance.transform.position = Input.mousePosition;
 			}

@@ -8,12 +8,11 @@
 	GridManager gridInstance;
 	Color materialColor;
 	public Vector3 originalPos;
+	public int tileWidth;
+	public int tileDepth;
 
 	void Awake() {
 		materialColor = GetComponent<Renderer>().material.color;
-	}
-
-	void Start() {
 		gridInstance = GameObject.Find("GridManager").GetComponent<GridManager>();
 	}
 	
@@ -61,12 +60,15 @@
 	public List<Vector3> GetPosition(){
 		List<Vector3> positions = new List<Vector3>();
 		Vector3 centerPos = transform.position;
-		positions.Add(new Vector3((centerPos.x + 0.73f/2f), centerPos.y, centerPos.z + 0.73f/2f));
-		positions.Add(new Vector3(centerPos.x + 0.73f/2f, centerPos.y, centerPos.z - 0.73f/2f));
-		positions.Add(new Vector3(centerPos.x - 0.73f/2f, centerPos.y, centerPos.z - 0.73f/2f));
-		positions.Add(new Vector3(centerPos.x - 0.73f/2f, centerPos.y, centerPos.z + 0.73f/2f));
+
+		float xStartPos = centerPos.x -(tileWidth/2 * gridInstance.tileSize/2);
+		float zStartPos = centerPos.z -(tileDepth/2 * gridInstance.tileSize/2);
+
+		for(float x = 0; x < tileWidth; x++){
+			for(float z = 0; z < tileDepth; z++){
+				positions.Add(new Vector3((xStartPos + (gridInstance.tileSize * x)), centerPos.y, (zStartPos + (gridInstance.tileSize * z))));
+			}
+		}
 		return positions;
-		
-		//return transform.position;
 	}
 }
